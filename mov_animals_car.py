@@ -33,18 +33,20 @@ class Tiger(Animal):
 
 
 class Car(Transport):
-    status = bool()
+
+    def __init__(self):
+        self.status = False
 
     def move(self):
 
-        if Car.status != True:
+        if self.status != True:
             print('Not launched')
         else:
             print('Car moves')
 
     def launch(self):
         print('Launched')
-        Car.status = True
+        self.status = True
 
 
 d = Duck()
